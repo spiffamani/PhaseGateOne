@@ -70,11 +70,15 @@ public class EcommerceCheckout {
     }  
 
     public static void main(String[] args) {  
-        String customerName = getCustomerName();  
+	String response = "yes";
+	        	
+	String customerName = getCustomerName();  
         String cashierName = getCashierName();  
         String productName = getProductName();  
         double quantity = getProductQuantity();  
-        double price = getProductPrice(productName);  
+        double price = getProductPrice(productName); 
+
+	
 
         if (price == 0) {  
             System.out.println("\nInvalid product selection. Please restart.");  
