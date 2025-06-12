@@ -1,75 +1,81 @@
-import datetime
-
-available_product = [ 'Bread' ,'videoGame' , 'Water' ]
-available_product_price = [200 , 500, 100]
-discount = 7.5 / 100
-vat = 17.58 / 100
-total = 0
-sub_total = 0
-bill_total = 0
-total_vat = 0
-
+import   datetime
 
 
 
 
 def getcustomer_name():
-	customer_name = input(" What is the customer's Name ")
+	customer_name = input(" What is the customer's Name : ")
 
-def getavailable_product():
-	for product in available_product:
-		response = " yes"
-	customer_product = input(" What did the user buy ")
-	if (resons.equalsIgnoreCase(customer_product)):
-			return customer_product
 
-def getproduct_quantity(available_product):
-	 product_quantity = int(input(" How many pieces " ))
-				
-for all_product_quantity in range(available_product_price):
-		print( all_product_quantity)
-			
+
 
 
 def getcashier_name():
-	cashier_name = input("Enter cashier Name")
+	cashier_name = input("Enter cashier Name : ")
 
 
-def getstore_product_calculations(available_product_price , product_quantity ):
-	 total =  available_product_price * product_quantity 
-	 sub_total = total - (discount *   product_quantity) 
-	 total_vat =  vat + (discount *  product_quantity)
-	 bill_total = ( available_product_price * product_quantity ) +  			total_vat
+
+def getavailable_product():
+	print("Available Product : Bread , VideoGame , Water " )
+
+	available_product = input(" What do you want to buy ")
+
+
+def getproduct_price(customer_choice):
+	if customer_choice.equalsIgnoreCase("Bread"):
+		return 500
+	if customer_choice.equalsIgnoreCase("VideoGame"):
+		return 2000
+	if customer_choice.equalsIgnoreCase("Water"):
+		return 200
+	
+	
+def getproduct_quantity(available_product):
+	 product_quantity = int(input(" How many pieces " ))
+	 while(input.isDigit()):
+	  print("Invalid quantity: Enter a number ")
+	  return product_quantity			
+
+def getdate_time():
+	return datetime.datetime
+
+
+
+def getstore_product_calculations(getcashier_name, getcustomer_name, available_product, getproduct_quantity , product_price ):
+	 discount =  product_price * product_quantity * 7.5 / 100
+	 vat = product_price *  product_quantity * 17.58 / 100
+	 total = (product_price * product_quantity ) - discount + vat
 
 print( " Receipt: ")
 print( " =======================================================")	
 print(     "  SEMICOLON STORES   ")
 print(   "  MAIN BRANCH  ")  
 print(  "Location: 312, HERBERT MACAULAY WAY, SABO YABA, LAGOS")
-print( "  Date : " ,  datetime )
-print( " Cashier : ",  getcashier_name)
-print( "customer : ", getcustomer_name)
+print( "  Date : " ,  getdate_time() )
+print( " customer : ", getcustomer_name())
+print( "cashier : ", getcashier_name())
 print("===========================================================")
 print("  ITEM          QTY          PRICE          TOTAL(NGN) ")
 print("------------------------------------------------------------")
-print("%s %s%n %s%n  %s%n ",getavailable_product, getproduct_quantity, getproduct_quantity ,getstore_product_calculations )
-print(" Sub Total :",(discount *   product_quantity))
-print("Discount   -%2.f : " , sub_total )
-print(" VAT +%2.f  : " ,  vat + (discount *  product_quantity) )
+print("%s , %2.f%n , %2.f%n", getavailable_product, getproduct_quantity, getproduct_price  (getproduct_price *   getproduct_quantity))
+print("---------------------------------------------------------------")
+print(" Sub Total :%2.f\nDISCOUNT :  -%2.f \nVAT: +%2.f",(product_price *   product_quantity), product_price , product_quantity)
+
 print("=============================================================")
-print(" Bill Total: ", bill_total)
+print(" Bill Total: ", total)
 print("==============================================================")
-print("THIS IS NOT AN RECEIPT, KINDLY PAY ",   getstore_product_calculations)
+print("THIS IS NOT AN RECEIPT, KINDLY PAY ",   total)
 print("===============================================================")
 
 
 
 def main():
-	getcustomer_name()
-	getavailable_product()
-	getproduct_quantity(available_product)
-	getcashier_name()
-	getstore_product_calculations(available_product_price )
+	getcustomer_name(customer_name)
+	getcashier_name(cashier_name)
+	getavailable_product(available_product)
+	getproduct_quantity(product_quantity)
+	
+	getstore_product_calculations(available_product , product_price, product_quantity , cashier_name, customer_name )
 
 
 
