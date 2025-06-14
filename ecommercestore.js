@@ -1,13 +1,13 @@
 function getcustomerName(){
 let customerName = String("Enter customer's Name ")
-return name;
+return customerName;
 }
 
 
 
 function getcashierName(){
 let cashierName = String("Enter customer's Name ")
-return names;
+return cashierName;
 }
 
 
@@ -66,12 +66,13 @@ console.log("\n=============================================================");
 }
 
 
-//main()
+ main()
 let productName = getproductName
 let customerName = getcustomerName
 let cashierName  = getcashierName
 let  productQuantity = getproductQuantity
 let  productPrice =  getproductPrice
+
 
 if (productPrice == 0){
 console.log("\n Invalid  product  selection : please restart");
