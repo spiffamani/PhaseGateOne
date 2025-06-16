@@ -11,14 +11,14 @@ public class MenstralCycle {
         return input.nextLine();
     }
 
-    public static LocalDate lastMenstrualCycle() {
+    public static LocalDate lastMenstralCycle() {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter your last menstrual cycle (yyyy-mm-dd): ");
+        System.out.print("Enter your last menstral cycle (yyyy-mm-dd): ");
         String lastDateString = input.nextLine();
         return LocalDate.parse(lastDateString);
     }
 
-    public static LocalDate nextMenstrualCycle(LocalDate lastCycle, int dateInterval) {
+    public static LocalDate nextMenstralCycle(LocalDate lastCycle, int dateInterval) {
         return lastCycle.plusDays(dateInterval);
     }
 
@@ -28,17 +28,17 @@ public class MenstralCycle {
 
     public static void main(String[] args) {
         String userName = getUsername();
-        LocalDate userLastMenstrualCycle = lastMenstrualCycle();
+        LocalDate userLastMenstralCycle = lastMenstralCycle();
 
         int dateInterval = 28;
         int lengthInterval = 14;
 
-        LocalDate userNextMenstrualCycle = nextMenstrualCycle(userLastMenstrualCycle, dateInterval);
-        LocalDate userLengthOfCycle = lengthOfCycle(userLastMenstrualCycle, lengthInterval);
+        LocalDate userNextMenstralCycle = nextMenstralCycle(userLastMenstralCycle, dateInterval);
+        LocalDate userLengthOfCycle = lengthOfCycle(userLastMenstralCycle, lengthInterval);
 
         System.out.println("\nHello, " + userName + "!");
-        System.out.println("Your last menstrual cycle was on: " + userLastMenstrualCycle);
-        System.out.println("Your next menstrual cycle is expected on: " + userNextMenstrualCycle);
+        System.out.println("Your last menstrual cycle was on: " + userLastMenstralCycle);
+        System.out.println("Your next menstrual cycle is expected on: " + userNextMenstralCycle);
         System.out.println("Your  cycle length calculation: " + userLengthOfCycle);
     }
 }
