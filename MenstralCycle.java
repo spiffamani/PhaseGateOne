@@ -26,25 +26,42 @@ public class MenstralCycle {
         return lastCycle.minusDays(lengthInterval);
     }
 
+	/*public class getfetileCycle(LocalDate lastCycle  ,  int lengthInterval){
+return lastCycle.minusDays(lengthInterval); 
+}*/
+
     public static void main(String[] args) {
-        String userName = getUsername();
+        
+	while(true){
+	String userName = getUsername();
         LocalDate userLastMenstralCycle = lastMenstralCycle();
 
         int dateInterval = 28;
         int lengthInterval = 14;
+	
+	// int fetileCycle =  5;
+
+
 
         LocalDate userNextMenstralCycle = nextMenstralCycle(userLastMenstralCycle, dateInterval);
         LocalDate userLengthOfCycle = lengthOfCycle(userLastMenstralCycle, lengthInterval);
+	// LocalDate userfetileCycle = getfetileCycle( userLengthOfCycle  , fetileCycle);
 
+
+	/*if (! userLastMenstralCycle.hasNextDouble());
+	System.out.print("Enter a valid number ");*/
         System.out.println("\nHello, " + userName + "!");
         System.out.println("Your last menstrual cycle was on: " + userLastMenstralCycle);
         System.out.println("Your next menstrual cycle is expected on: " + userNextMenstralCycle);
         System.out.println("Your  cycle length calculation: " + userLengthOfCycle);
-    }
+
+	/*System.out.println("Your  fetile Cycle  calculation: " + userfetileCycle);
+
+    }*/
 }
 
-
-
+}
+}
 
 
 

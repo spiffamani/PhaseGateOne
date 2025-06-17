@@ -19,7 +19,9 @@ public class EcommerceCheckout {
         Scanner input = new Scanner(System.in);  
         System.out.println("\nAvailable Products: Cornflakes, Bread, Video Game");  
         System.out.print("What do you want to buy? ");  
-        return input.nextLine();  
+        String userinput = input.nextLine(); 
+
+	return userinput;
     }  
 
     public static double getProductPrice(String product) {  
